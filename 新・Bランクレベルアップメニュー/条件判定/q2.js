@@ -6,12 +6,12 @@ const main = (input) => {
         const [t, r] = lines[i].split(' ');
         visionTest.push([t, r === 'ok']);
     }
-    
+
     const evaluateVision = (tests) => {
       let successCount = { 'TA': 0, 'TB': 0, 'TC': 0, 'TD': 0 };
       let failureCount = { 'TA': 0, 'TB': 0, 'TC': 0, 'TD': 0 };
       let visionLevel = ['E'];
-    
+
       for (const [test, result] of tests) {
         if (result) {
           successCount[test]++;
@@ -26,8 +26,8 @@ const main = (input) => {
       }
 
       return visionLevel.sort().shift();
-    }   
+    }
 
-    console.log(evaluateVision(visionTest))
+    console.log(evaluateVision(visionTest));
 }
 main(require('fs').readFileSync('/dev/stdin', 'utf8'));
