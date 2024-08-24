@@ -19,7 +19,7 @@ const main = (input) => {
 }
 main(require('fs').readFileSync('/dev/stdin', 'utf8'));
 
-// 別解
+// 別解1
 // const main = (input) => {
 //     const lines = input.trim().split('\n');
 //     const [N, K] = lines[0].split(' ').map(Number);
@@ -41,6 +41,28 @@ main(require('fs').readFileSync('/dev/stdin', 'utf8'));
 //     }
 
 //     console.log(maxSum);
+// }
+
+// main(require('fs').readFileSync('/dev/stdin', 'utf8'));
+
+//別解2
+// const main = (input) => {
+//     const lines = input.trim().split('\n');
+//     const [N, K] = lines[0].split(' ').map(Number);
+//     const sushiPrices = lines.slice(1).map(Number);
+
+//     let maxTotal = 0;
+
+//     for (let i = 0; i < N; i++) {
+//         let total = 0;
+//         for (let j = 0; j < K; j++) {
+//             total += sushiPrices[(i + j) % N];
+//         }
+
+//         maxTotal = Math.max(maxTotal, total);
+//     }
+
+//     console.log(maxTotal);
 // }
 
 // main(require('fs').readFileSync('/dev/stdin', 'utf8'));
