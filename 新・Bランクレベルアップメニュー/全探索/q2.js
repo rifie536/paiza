@@ -23,3 +23,26 @@ const main = (input) => {
     console.log(maxAmount);
 }
 main(require('fs').readFileSync('/dev/stdin', 'utf8'));
+
+//bit全探索
+// const main = (input) => {
+//     const lines = input.trim().split('\n');
+//     const [n, largeCup] = lines[0].split(' ').map(Number);
+//     const smallCups = lines.slice(1, n + 1).map(Number);
+    
+//     let maxAmount = 0;
+//     for (let bit = 0; bit < (1 << n); bit++) {
+//         let currentAmout = 0;
+//         for (let i = 0; i < n; i++) {
+//             if (bit & (1 << i)) {
+//                 currentAmout += smallCups[i];
+//             }
+//         }
+//         if (currentAmout <= largeCup && currentAmout > maxAmount) {
+//             maxAmount = currentAmout;
+//         }
+//     }
+    
+//     console.log(maxAmount);
+// }
+// main(require('fs').readFileSync('/dev/stdin', 'utf8'));
