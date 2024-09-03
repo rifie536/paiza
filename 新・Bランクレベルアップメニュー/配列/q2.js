@@ -2,7 +2,7 @@ const main = (input) => {
     const lines = input.trim().split('\n');
     const n = Number(lines.shift());
     let array = [];
-    for (let i = 0; i < n ** 2; i += n) {
+    for (let i = 0; i < n * n; i += n) {
         let tempArray = [];
         for (let j = 0; j < n; j++) {
             tempArray.push(lines[i + j].split(' ').map(Number));
@@ -39,13 +39,15 @@ const main = (input) => {
 
             let tempWidthTotal = 0;
             let tempHeightTotal = 0;
+            let tempDepthTotal = 0;
             for (let k = 0; k < n; k++) {
                 tempWidthTotal += array[i][j][k];
                 tempHeightTotal += array[i][k][j];
+                tempDepthTotal += array[k][j][i];
             }
             totalArray.push(tempWidthTotal);
             totalArray.push(tempHeightTotal);
-
+            totalArray.push(tempDepthTotal);
         }
         totalArray.push(tempDownRightDiagonalTotal);
         totalArray.push(tempDownLeftDiagonalTotal);
