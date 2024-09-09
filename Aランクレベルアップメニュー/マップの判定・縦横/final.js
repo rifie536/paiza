@@ -8,15 +8,15 @@ const main = (input) => {
                 console.log(`${i} ${j}`); // 最左上を確認
             } else if (i === 0 && j === w - 1 && board[i + 1][j] === '#' && board[i][j - 1] === '#') {
                 console.log(`${i} ${j}`); // 最右上を確認
-            }else if (i === 0 && j > 0 && j < w - 1 && board[0][j - 1] === '#' && board[0][j + 1] === '#' && board[1][j] === '#') {
+            } else if (i === 0 && j > 0 && j < w - 1 && board[0][j - 1] === '#' && board[0][j + 1] === '#' && board[1][j] === '#') {
                 console.log(`${i} ${j}`); // 最左上以外と最右上以外の上を確認
             } else if (i > 0 && i < h - 1 && j === 0 && board[i][j + 1] === '#' && board[i - 1][j] === '#' && board[i + 1][j] === '#') {
                 console.log(`${i} ${j}`); // 最左上と最左下以外の左を確認
             } else if (i > 0 && i < h - 1 && j === w - 1 && board[i][j - 1] === '#' && board[i - 1][j] === '#' && board[i + 1][j] === '#') {
                 console.log(`${i} ${j}`); // 最右上と最右下以外の右を確認
-            }else if (i > 0 && i < h - 1 && j > 0 && j < w - 1 && board[i - 1][j] === '#' && board[i + 1][j] === '#' && board[i][j - 1] === '#' && board[i][j + 1] === '#') {
+            } else if (i > 0 && i < h - 1 && j > 0 && j < w - 1 && board[i - 1][j] === '#' && board[i + 1][j] === '#' && board[i][j - 1] === '#' && board[i][j + 1] === '#') {
                 console.log(`${i} ${j}`); // 最左、最右、最上、最下以外を確認
-            }else if (i === h - 1 && j === 0 && board[i - 1][0] === '#' && board[i][1] === '#') {
+            } else if (i === h - 1 && j === 0 && board[i - 1][0] === '#' && board[i][1] === '#') {
                 console.log(`${i} ${j}`); // 最左下を確認
             } else if (i === h - 1 && j > 0 && j < w - 1 && board[i - 1][j] === '#' && board[i][j - 1] === '#' && board[i][j + 1] === '#') {
                 console.log(`${i} ${j}`); // 最左下と最右下以外の下を確認
