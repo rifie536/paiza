@@ -12,7 +12,7 @@ const main = (input) => {
     }
     const canMove = (direction) => {
         operations[direction]();
-        if (currentY >= 0 && currentX >= 0 && map[currentY][currentX] === '.') {
+        if (currentY >= 0 && currentX >= 0 && currentY < Number(h) && currentX < Number(w) && map[currentY][currentX] === '.') {
             console.log('Yes');
         } else {
             console.log('No');
