@@ -24,7 +24,7 @@ const main = (input) => {
     }
     const canMove = (currentDirection, moveDirection) => {
         operation[currentDirection][moveDirection]();
-        if (currentY > 0 && currentY < Number(h) && currentX > 0 && currentX < Number(w) && map[currentY][currentX] === '.') {
+        if (currentY >= 0 && currentY < Number(h) && currentX >= 0 && currentX < Number(w) && map[currentY][currentX] === '.') {
             return 'Yes';
         } else {
             return 'No';
