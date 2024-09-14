@@ -59,3 +59,52 @@ const main = (input) => {
     }
 }
 main(require('fs').readFileSync('/dev/stdin', 'utf8'));
+
+// claudeの解答
+// const input = require('fs').readFileSync('/dev/stdin', 'utf8').trim().split('\n');
+
+// const [H, W, sy, sx, N] = input[0].split(' ').map(Number);
+// const maze = input.slice(1, H + 1);
+// const directions = input.slice(H + 1);
+
+// const dy = [-1, 0, 1, 0];  // North, East, South, West
+// const dx = [0, 1, 0, -1];
+
+// let y = sy;
+// let x = sx;
+// let facing = 0;  // 0: North, 1: East, 2: South, 3: West
+
+// function turn(direction) {
+//     if (direction === 'R') {
+//         facing = (facing + 1) % 4;
+//     } else if (direction === 'L') {
+//         facing = (facing + 3) % 4;
+//     }
+// }
+
+// function move() {
+//     const ny = y + dy[facing];
+//     const nx = x + dx[facing];
+
+//     if (ny < 0 || ny >= H || nx < 0 || nx >= W || maze[ny][nx] === '#') {
+//         return false;
+//     }
+
+//     y = ny;
+//     x = nx;
+//     return true;
+// }
+
+// function simulate() {
+//     for (const direction of directions) {
+//         turn(direction);
+//         if (move()) {
+//             console.log(y, x);
+//         } else {
+//             console.log('Stop');
+//             break;
+//         }
+//     }
+// }
+
+// simulate();
