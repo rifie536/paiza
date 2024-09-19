@@ -2,7 +2,7 @@ const main = (input) => {
     const lines = input.trim().split('\n');
     const [h, w] = lines[0].split(' ').map(Number);
     const board = lines.slice(1).map(line => line.split(''));
-    const playersTeritory = (h, w, board) => {
+    const playersTerritory = (h, w, board) => {
         for (let i = 0; i < h; i++) {
             for (let j = 0; j < w; j++) {
                 if (board[i][j] === '*') {
@@ -15,6 +15,6 @@ const main = (input) => {
              }
         }
     }
-    console.log(playersTeritory(h, w, board));
+    console.log(playersTerritory(h, w, board));
 }
 main(require('fs').readFileSync('/dev/stdin', 'utf8'));
