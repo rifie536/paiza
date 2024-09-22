@@ -13,8 +13,10 @@ const main = (input) => {
                 }
              }
         }
-        return board.map(row => row.join('')).join('\n');
     }
-    console.log(playersTerritory(h, w, board));
+    for (let i = 0; i < h * w; i++) {
+        playersTerritory(h, w, board);
+    }
+    console.log(board.map(row => row.join('')).join('\n'));
 }
 main(require('fs').readFileSync('/dev/stdin', 'Utf8'));
