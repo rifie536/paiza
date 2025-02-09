@@ -11,3 +11,22 @@ const main = (input) => {
     }
 }
 main(require('fs').readFileSync('/dev/stdin', 'utf8'));
+
+
+// TypeScript
+
+// const main = (input: string): void => {
+//     const lines: string[] = input.trim().split('\n');
+//     const [h, w]: number[] = lines[0].split(' ').map(Number);
+//     const map: string[] = lines.slice(1);
+ 
+//     for (let i = 0; i < h; i++) {
+//         for (let j = 0; j < w; j++) {
+//             if (map[i][j] === '#') {
+//                 console.log(`${i} ${j}`);
+//             }
+//         }
+//     }
+//  }
+ 
+//  main(require('fs').readFileSync('/dev/stdin', 'utf8'));
