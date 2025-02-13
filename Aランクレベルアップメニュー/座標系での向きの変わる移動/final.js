@@ -50,3 +50,61 @@ const main = (input) => {
     }
 }
 main(require('fs').readFileSync('/dev/stdin', 'utf8'));
+
+
+// TypeScript
+
+// const main = (input: string): void => {
+//     const lines: string[] = input.trim().split('\n');
+//     const [x, y, n]: number[] = lines[0].split(' ').map(Number);
+//     const directions: string[] = lines.slice(1);
+//     let currentX: number = x;
+//     let currentY: number = y;
+//     let currentDirection: 'N' | 'E' | 'W' | 'S' = 'N';
+ 
+//     const operation: Record<typeof currentDirection, (direction: string) => void> = {
+//         'N': (direction: string) => {
+//             if (direction === 'L') {
+//                 currentX--;
+//                 currentDirection = 'W';
+//             } else {
+//                 currentX++;
+//                 currentDirection = 'E';
+//             }
+//         },
+//         'E': (direction: string) => {
+//             if (direction === 'L') {
+//                 currentY--;
+//                 currentDirection = 'N';
+//             } else {
+//                 currentY++;
+//                 currentDirection = 'S';
+//             }
+//         },
+//         'W': (direction: string) => {
+//             if (direction === 'L') {
+//                 currentY++;
+//                 currentDirection = 'S';
+//             } else {
+//                 currentY--;
+//                 currentDirection = 'N';
+//             }
+//         },
+//         'S': (direction: string) => {
+//             if (direction === 'L') {
+//                 currentX++;
+//                 currentDirection = 'E';
+//             } else {
+//                 currentX--;
+//                 currentDirection = 'W';
+//             }
+//         },
+//     };
+ 
+//     for (let i = 0; i < n; i++) {
+//         operation[currentDirection](directions[i]);
+//         console.log(`${currentX} ${currentY}`);
+//     }
+//  }
+ 
+//  main(require('fs').readFileSync('/dev/stdin', 'utf8'));
