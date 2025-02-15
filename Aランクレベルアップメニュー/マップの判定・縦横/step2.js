@@ -9,3 +9,32 @@ const main = (input) => {
     console.log(board.map(row => row.join('')).join('\n'));
 }
 main(require('fs').readFileSync('/dev/stdin', 'utf8'));
+
+
+// TypeScript
+
+// type Coordinate = [number, number];
+// type Board = string[][];
+
+// const main = (input: string): void => {
+
+//     const lines: string[] = input.trim().split('\n');
+
+//     const [h, w, n]: number[] = lines[0].split(' ').map(Number);
+
+//     const board: Board = lines
+//         .slice(1, h + 1)
+//         .map(line => line.split(''));
+
+//     const coordinates: Coordinate[] = lines
+//         .slice(h + 1)
+//         .map(line => line.split(' ').map(Number) as Coordinate);
+
+//     coordinates.forEach(([y, x]: Coordinate) => {
+//         board[y][x] = '#';
+//     });
+
+//     console.log(board.map(row => row.join('')).join('\n'));
+// };
+
+// main(require('fs').readFileSync('/dev/stdin', 'utf8'));
