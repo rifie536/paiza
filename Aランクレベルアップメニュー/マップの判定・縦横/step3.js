@@ -14,3 +14,26 @@ const main = (input) => {
     }
 }
 main(require('fs').readFileSync('/dev/stdin', 'utf8'));
+
+
+// TypeScript
+
+// const main = (input: string): void => {
+//     const lines: string[] = input.trim().split('\n');
+//     const [h, w]: number[] = lines[0].split(' ').map(Number);
+//     const board: string[][] = lines.slice(1).map(line => line.split(''));
+
+//     for (let i = 0; i < h; i++) {
+//         for (let j = 0; j < w; j++) {
+//             if (
+//                 (j === 0 && board[i][1] === '#') ||
+//                 (j === w - 1 && board[i][w - 2] === '#') ||
+//                 (j > 0 && j < w - 1 && board[i][j - 1] === '#' && board[i][j + 1] === '#')
+//             ) {
+//                 console.log(`${i} ${j}`);
+//             }
+//         }
+//     }
+// };
+
+// main(require('fs').readFileSync('/dev/stdin', 'utf8'));
