@@ -84,3 +84,94 @@ main(require('fs').readFileSync('/dev/stdin', 'utf8'));
 // };
 
 // main(require('fs').readFileSync('/dev/stdin', 'utf8'));
+
+// TypeScript
+
+// type Position = {
+//     i: number;
+//     j: number;
+// };
+
+// type BoardDimensions = {
+//     h: number;
+//     w: number;
+// };
+
+// const checkTopLeft = (board: string[], pos: Position): boolean => {
+//     const { i, j } = pos;
+//     return i === 0 && j === 0 && board[i][j + 1] === '#' && board[i + 1][j] === '#';
+// };
+
+// const checkTopRight = (board: string[], pos: Position, w: number): boolean => {
+//     const { i, j } = pos;
+//     return i === 0 && j === w - 1 && board[i + 1][j] === '#' && board[i][j - 1] === '#';
+// };
+
+// const checkTopEdge = (board: string[], pos: Position, w: number): boolean => {
+//     const { i, j } = pos;
+//     return i === 0 && j > 0 && j < w - 1 && 
+//            board[0][j - 1] === '#' && board[0][j + 1] === '#' && board[1][j] === '#';
+// };
+
+// const checkLeftEdge = (board: string[], pos: Position, dims: BoardDimensions): boolean => {
+//     const { i, j } = pos;
+//     return i > 0 && i < dims.h - 1 && j === 0 && 
+//            board[i][j + 1] === '#' && board[i - 1][j] === '#' && board[i + 1][j] === '#';
+// };
+
+// const checkRightEdge = (board: string[], pos: Position, dims: BoardDimensions): boolean => {
+//     const { i, j } = pos;
+//     return i > 0 && i < dims.h - 1 && j === dims.w - 1 && 
+//            board[i][j - 1] === '#' && board[i - 1][j] === '#' && board[i + 1][j] === '#';
+// };
+
+// const checkCenter = (board: string[], pos: Position, dims: BoardDimensions): boolean => {
+//     const { i, j } = pos;
+//     return i > 0 && i < dims.h - 1 && j > 0 && j < dims.w - 1 && 
+//            board[i - 1][j] === '#' && board[i + 1][j] === '#' && 
+//            board[i][j - 1] === '#' && board[i][j + 1] === '#';
+// };
+
+// const checkBottomLeft = (board: string[], pos: Position, h: number): boolean => {
+//     const { i, j } = pos;
+//     return i === h - 1 && j === 0 && board[i - 1][0] === '#' && board[i][1] === '#';
+// };
+
+// const checkBottomEdge = (board: string[], pos: Position, dims: BoardDimensions): boolean => {
+//     const { i, j } = pos;
+//     return i === dims.h - 1 && j > 0 && j < dims.w - 1 && 
+//            board[i - 1][j] === '#' && board[i][j - 1] === '#' && board[i][j + 1] === '#';
+// };
+
+// const checkBottomRight = (board: string[], pos: Position, dims: BoardDimensions): boolean => {
+//     const { i, j } = pos;
+//     return i === dims.h - 1 && j === dims.w - 1 && 
+//            board[i][j - 1] === '#' && board[i - 1][j] === '#';
+// };
+
+// const main = (input: string): void => {
+//     const lines: string[] = input.trim().split('\n');
+//     const [h, w]: number[] = lines[0].split(' ').map(Number);
+//     const board: string[] = lines.slice(1);
+//     const dims: BoardDimensions = { h, w };
+
+//     for (let i: number = 0; i < h; i++) {
+//         for (let j: number = 0; j < w; j++) {
+//             const pos: Position = { i, j };
+            
+//             if (checkTopLeft(board, pos) ||
+//                 checkTopRight(board, pos, w) ||
+//                 checkTopEdge(board, pos, w) ||
+//                 checkLeftEdge(board, pos, dims) ||
+//                 checkRightEdge(board, pos, dims) ||
+//                 checkCenter(board, pos, dims) ||
+//                 checkBottomLeft(board, pos, h) ||
+//                 checkBottomEdge(board, pos, dims) ||
+//                 checkBottomRight(board, pos, dims)) {
+//                 console.log(`${i} ${j}`);
+//             }
+//         }
+//     }
+// };
+
+// main(require('fs').readFileSync('/dev/stdin', 'utf8'));
