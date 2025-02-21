@@ -60,7 +60,7 @@ const main = (input) => {
 }
 main(require('fs').readFileSync('/dev/stdin', 'utf8'));
 
-// claudeの解答
+// // claudeの解答
 // const input = require('fs').readFileSync('/dev/stdin', 'utf8').trim().split('\n');
 
 // const [H, W, sy, sx, N] = input[0].split(' ').map(Number);
@@ -108,3 +108,91 @@ main(require('fs').readFileSync('/dev/stdin', 'utf8'));
 // }
 
 // simulate();
+
+// TypeScript
+
+// type Direction = 'R' | 'L';
+
+// type Position = {
+//     y: number;
+//     x: number;
+// };
+
+// type MazeDimensions = {
+//     height: number;
+//     width: number;
+// };
+
+// const simulate = (
+//     input: string[]
+// ): void => {
+//     const [H, W, sy, sx, N] = input[0].split(' ').map(Number);
+//     const maze: string[] = input.slice(1, H + 1);
+//     const directions: string[] = input.slice(H + 1);
+
+//     const dimensions: MazeDimensions = {
+//         height: H,
+//         width: W
+//     };
+
+//     const dy: number[] = [-1, 0, 1, 0];  // North, East, South, West
+//     const dx: number[] = [0, 1, 0, -1];
+
+//     let position: Position = {
+//         y: sy,
+//         x: sx
+//     };
+    
+//     let facing: number = 0;  // 0: North, 1: East, 2: South, 3: West
+
+//     const turn = (direction: Direction): void => {
+//         if (direction === 'R') {
+//             facing = (facing + 1) % 4;
+//         } else if (direction === 'L') {
+//             facing = (facing + 3) % 4;
+//         }
+//     };
+
+//     const isValidPosition = (pos: Position): boolean => {
+//         return pos.y >= 0 && 
+//                pos.y < dimensions.height && 
+//                pos.x >= 0 && 
+//                pos.x < dimensions.width && 
+//                maze[pos.y][pos.x] !== '#';
+//     };
+
+//     const move = (): boolean => {
+//         const nextPosition: Position = {
+//             y: position.y + dy[facing],
+//             x: position.x + dx[facing]
+//         };
+
+//         if (!isValidPosition(nextPosition)) {
+//             return false;
+//         }
+
+//         position = nextPosition;
+//         return true;
+//     };
+
+//     const runSimulation = (): void => {
+//         for (const direction of directions) {
+//             turn(direction as Direction);
+//             if (move()) {
+//                 console.log(position.y, position.x);
+//             } else {
+//                 console.log('Stop');
+//                 break;
+//             }
+//         }
+//     };
+
+//     runSimulation();
+// };
+
+// const input: string[] = require('fs')
+//     .readFileSync('/dev/stdin', 'utf8')
+//     .trim()
+//     .split('\n');
+
+// simulate(input);
