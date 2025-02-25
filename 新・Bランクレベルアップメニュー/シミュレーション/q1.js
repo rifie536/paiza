@@ -31,3 +31,21 @@ main(require('fs').readFileSync('/dev/stdin', 'utf8'));
 // }
 
 // main(require('fs').readFileSync('/dev/stdin', 'utf8'));
+
+
+// TypeScript
+
+// const main = (input: string): void => {
+//     const [N, X, K] = input.trim().split(' ').map(Number);
+    
+//     let result: number;
+//     if (K % 4 === 3) {
+//         result = 2 * X * Math.floor((K - 4 * N) / 4) + X;
+//     } else {
+//         result = 2 * X * Math.floor((K - 4 * N) / 4);
+//     }
+    
+//     console.log(result);
+// };
+
+// main(require('fs').readFileSync('/dev/stdin', 'utf8'));
