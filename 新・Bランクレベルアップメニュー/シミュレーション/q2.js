@@ -26,3 +26,38 @@ const main = (input) => {
 };
 
 main(require('fs').readFileSync('/dev/stdin', 'utf8'));
+
+
+// TypeScript
+
+// const main = (input: string): void => {
+//     const k: number = Number(input.trim());
+//     const suits: string[] = ["S", "H", "D", "C"];
+//     const numberOfCards: number = 13;
+
+//     const initialDeck: string[] = suits.flatMap(suit =>
+//         Array.from({length: numberOfCards}, (_, i) => `${suit}_${i + 1}`)
+//     );
+
+//     const perfectShuffle = (deck: string[], shuffleCount: number): string[] => {
+//         let shuffledDeck: string[] = [...deck];
+        
+//         for (let i = 0; i < shuffleCount; i++) {
+//             const half: number = shuffledDeck.length / 2;
+//             const upperHalf: string[] = shuffledDeck.slice(0, half);
+//             const lowerHalf: string[] = shuffledDeck.slice(half);
+//             shuffledDeck = [];
+
+//             for (let j = 0; j < half; j++) {
+//                 shuffledDeck.push(upperHalf[j], lowerHalf[j]);
+//             }
+//         }
+//         return shuffledDeck;
+//     };
+
+//     const result: string[] = perfectShuffle(initialDeck, k);
+//     console.log(result.join('\n'));
+// };
+
+
+// main(require('fs').readFileSync('/dev/stdin', 'utf8'));
