@@ -60,3 +60,33 @@ main(require('fs').readFileSync('/dev/stdin', 'utf8'));
 // }
 
 // main(require('fs').readFileSync('/dev/stdin', 'utf8'));
+
+
+// TypeScript
+
+// const main = (input: string): void => {
+//     const lines: string[] = input.trim().split('\n');
+//     const x: number = Number(lines.shift());
+//     const [f1, f2]: number[] = lines.shift()!.split(' ').map(Number);
+//     const [l, n]: number[] = lines.shift()!.split(' ').map(Number);
+//     const s: number[] = n > 0 ? lines[0].split(' ').map(Number) : [];
+
+//     let totalFuel: number = 0;
+//     let lastStop: number = 0;
+
+//     for (let i = 0; i <= n; i++) {
+//         const currentStop: number = i < n ? s[i] : l;
+//         const distance: number = currentStop - lastStop;
+
+//         totalFuel += Math.min(distance, x) * f1;
+//         if (distance > x) {
+//             totalFuel += (distance - x) * f2;
+//         }
+
+//         lastStop = currentStop;
+//     }
+
+//     console.log(Math.floor(totalFuel));
+// };
+
+// main(require('fs').readFileSync('/dev/stdin', 'utf8'));
