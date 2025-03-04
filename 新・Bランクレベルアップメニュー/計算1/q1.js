@@ -62,3 +62,42 @@ main(require('fs').readFileSync('/dev/stdin', 'utf8'));
 // }
 
 // main(require('fs').readFileSync('/dev/stdin', 'utf8'));
+
+// TypeScript
+
+// interface DistancePoint {
+//     index: number;
+//     distance: number;
+// }
+
+// const main = (input: string): void => {
+//     const lines: string[] = input.trim().split('\n');
+//     const [Px, Py]: number[] = lines[0].split(' ').map(Number);
+//     const N: number = parseInt(lines[1]);
+//     const points: number[][] = lines.slice(2).map(line => line.split(' ').map(Number));
+    
+//     const calculateDistances = (distanceFunc: (point: number[]) => number): DistancePoint[] => 
+//         points.map((point, index) => ({
+//             index: index + 1,
+//             distance: distanceFunc(point)
+//         }));
+    
+//     const euclideanDistances: DistancePoint[] = calculateDistances(point => 
+//         Math.sqrt((Px - point[0])**2 + (Py - point[1])**2)
+//     );
+    
+//     const manhattanDistances: DistancePoint[] = calculateDistances(point => 
+//         Math.abs(Px - point[0]) + Math.abs(Py - point[1])
+//     );
+    
+//     const sortDistances = (distances: DistancePoint[]): DistancePoint[] => 
+//         distances.sort((a, b) => a.distance - b.distance || a.index - b.index);
+    
+//     const printTopThree = (sorted: DistancePoint[]): void => 
+//         console.log(sorted.slice(0, 3).map(item => item.index).join('\n'));
+    
+//     printTopThree(sortDistances(euclideanDistances));
+//     printTopThree(sortDistances(manhattanDistances));
+// };
+
+// main(require('fs').readFileSync('/dev/stdin', 'utf8'));
