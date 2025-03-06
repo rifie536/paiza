@@ -45,7 +45,7 @@ main(require('fs').readFileSync('/dev/stdin', 'utf8'));
 
 // main(require('fs').readFileSync('/dev/stdin', 'utf8'));
 
-//別解2
+// 別解2
 // const main = (input) => {
 //     const lines = input.trim().split('\n');
 //     const [N, K] = lines[0].split(' ').map(Number);
@@ -56,6 +56,30 @@ main(require('fs').readFileSync('/dev/stdin', 'utf8'));
 //     for (let i = 0; i < N; i++) {
 //         let total = 0;
 //         for (let j = 0; j < K; j++) {
+//             total += sushiPrices[(i + j) % N];
+//         }
+
+//         maxTotal = Math.max(maxTotal, total);
+//     }
+
+//     console.log(maxTotal);
+// }
+
+// main(require('fs').readFileSync('/dev/stdin', 'utf8'));
+
+
+// TyoeScript
+
+// const main = (input: string): void => {
+//     const lines: string[] = input.trim().split('\n');
+//     const [N, K]: number[] = lines[0].split(' ').map(Number);
+//     const sushiPrices: number[] = lines.slice(1).map(Number);
+
+//     let maxTotal: number = 0;
+
+//     for (let i: number = 0; i < N; i++) {
+//         let total: number = 0;
+//         for (let j: number = 0; j < K; j++) {
 //             total += sushiPrices[(i + j) % N];
 //         }
 
