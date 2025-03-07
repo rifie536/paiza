@@ -68,7 +68,7 @@ main(require('fs').readFileSync('/dev/stdin', 'utf8'));
 // main(require('fs').readFileSync('/dev/stdin', 'utf8'));
 
 
-// TyoeScript
+// TypeScript
 
 // const main = (input: string): void => {
 //     const lines: string[] = input.trim().split('\n');

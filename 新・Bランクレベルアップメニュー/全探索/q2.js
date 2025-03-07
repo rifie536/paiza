@@ -46,3 +46,32 @@ main(require('fs').readFileSync('/dev/stdin', 'utf8'));
 //     console.log(maxAmount);
 // }
 // main(require('fs').readFileSync('/dev/stdin', 'utf8'));
+
+
+// TypeScript
+
+// const main = (input: string): void => {
+//     const lines: string[] = input.trim().split('\n');
+//     const [n, largeCup]: number[] = lines[0].split(' ').map(Number);
+//     const smallCups: number[] = lines.slice(1, n + 1).map(Number);
+    
+//     const dp: boolean[] = Array(largeCup + 1).fill(false);
+//     dp[0] = true;
+    
+//     for (const cup of smallCups) {
+//         for (let i: number = largeCup; i >= cup; i--) {
+//             if (dp[i - cup]) {
+//                 dp[i] = true;
+//             } 
+//         }
+//     }
+    
+//     let maxAmount: number = largeCup;
+//     while (!dp[maxAmount]) {
+//         maxAmount--;
+//     }
+    
+//     console.log(maxAmount);
+// }
+
+// main(require('fs').readFileSync('/dev/stdin', 'utf8'));
