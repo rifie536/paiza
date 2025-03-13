@@ -5,3 +5,14 @@ const main = (input) => {
 }
 
 main(require('fs').readFileSync('/dev/stdin', 'utf8'));
+
+
+// TypeScript
+
+// const main = (input: string): void => {
+//     const [n, ...numbers] = input.trim().split('\n');
+//     const hasSevenInInput = numbers.some(num => +num === 7);
+//     console.log(hasSevenInInput ? 'YES' : 'NO');
+// }
+
+// main(require('fs').readFileSync('/dev/stdin', 'utf8'));
