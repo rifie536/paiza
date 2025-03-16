@@ -6,3 +6,15 @@ const main = (input) => {
 }
 
 main(require('fs').readFileSync('/dev/stdin', 'utf8'));
+
+
+// TypeScript
+
+// const main = (input: string): void => {
+//     const [n, ...numbers] = input.trim().split('\n');
+//     const k = numbers.pop();
+//     const indexOfK = numbers.findIndex(num => num === k);
+//     console.log(indexOfK + 1);
+// }
+
+// main(require('fs').readFileSync('/dev/stdin', 'utf8'));
