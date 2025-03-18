@@ -16,3 +16,25 @@ const main = (input) => {
     }
 }
 main(require('fs').readFileSync('/dev/stdin', 'utf8'));
+
+
+// TypeScript
+
+// const main = (input: string): void => {
+//     const lines = input.trim().split('\n');
+//     const nmk = lines.shift()!.split(' ');
+//     const n = Number(nmk[0]);
+//     const m = Number(nmk[1]);
+//     const k = nmk[2];
+//     for (let i = 0; i < n; i++) {
+//         let point = 0;
+//         const nums = lines[i].split(' ');
+//        for (let j = 0; j < m; j++) {
+//           if (nums[j] === k) {
+//               point += 1;
+//           }
+//        } 
+//        console.log(point);
+//     }
+// }
+// main(require('fs').readFileSync('/dev/stdin', 'utf8'));
