@@ -15,3 +15,24 @@ const main = (input) => {
     }
 }
 main(require('fs').readFileSync('/dev/stdin', 'utf8'));
+
+
+// TypeScript
+
+// const main = (input: string): void => {
+//     let hp = Number(input.trim());
+//     const paizaAttack: number[] = [1, 1];
+//     const monsterAttack: number[] = [1, 1];
+//     for (let i = 3; ; i++) {
+//         paizaAttack.push(monsterAttack[0] + monsterAttack[1]);
+//         monsterAttack.push(paizaAttack[0] + paizaAttack[1] * 2);
+//         paizaAttack.shift();
+//         monsterAttack.shift();
+//         hp -= monsterAttack[1];
+//         if (hp - 2 <= 0) {
+//             console.log(i);
+//             break;
+//         }
+//     }
+//  }
+//  main(require('fs').readFileSync('/dev/stdin', 'utf8'));
