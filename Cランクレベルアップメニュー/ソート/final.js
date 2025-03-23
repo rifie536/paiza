@@ -5,6 +5,20 @@ const main = (input) => {
         a[1] !== b[1] ? b[1] - a[1] : b[0] - a[0]
     ).map(num => num.join(' '));
     console.log(sortedGs.join('\n'));
- } 
- 
+ }
+
  main(require('fs').readFileSync('/dev/stdin', 'utf8'));
+
+
+//  TypeScript
+
+//  const main = (input: string): void => {
+//     const [n, ...nums] = input.trim().split('\n');
+//     const gs: number[][] = nums.map(num => num.split(' ').map(Number));
+//     const sortedGs = gs.sort((a: number[], b: number[]) =>
+//         a[1] !== b[1] ? b[1] - a[1] : b[0] - a[0]
+//     ).map(num => num.join(' '));
+//     console.log(sortedGs.join('\n'));
+// }
+
+// main(require('fs').readFileSync('/dev/stdin', 'utf8'));
