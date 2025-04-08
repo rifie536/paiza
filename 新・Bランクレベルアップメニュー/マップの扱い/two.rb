@@ -9,3 +9,16 @@ if x - 1 >= 0 then s[y][x - 1] == "#" ? s[y][x - 1] = "." : s[y][x - 1] = "#" en
 if x + 1 < w then s[y][x + 1] == "#" ? s[y][x + 1] = "." : s[y][x + 1] = "#" end
 
 puts s
+
+# 短絡評価
+# h, w = gets.split(' ').map(&:to_i)
+# s = []
+# h.times { |i| s[i] = gets.chomp }
+# y, x = gets.split(' ').map(&:to_i)
+# s[y][x] == "#" ? s[y][x] = "." : s[y][x] = "#"
+# y - 1 >= 0 && (s[y - 1][x] == "#" ? s[y - 1][x] = "." : s[y - 1][x] = "#")
+# y + 1 < h && (s[y + 1][x] == "#" ? s[y + 1][x] = "." : s[y + 1][x] = "#")
+# x - 1 >= 0 && (s[y][x - 1] == "#" ? s[y][x - 1] = "." : s[y][x - 1] = "#")
+# x + 1 < w && (s[y][x + 1] == "#" ? s[y][x + 1] = "." : s[y][x + 1] = "#")
+
+# puts s
