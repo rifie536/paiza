@@ -1,0 +1,13 @@
+n, x = gets.split.map(&:to_i)
+a = n.times.map { gets.to_i }
+
+dp = Array.new(x + 1, 0)
+dp[0] = 1
+
+for i in 0...n
+    for j in (a[i]..x).to_a.reverse
+        dp[j] = dp[j] + dp[j - a[i]]
+    end
+end
+
+puts dp[x] % 1000000007
